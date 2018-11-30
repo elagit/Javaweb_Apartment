@@ -33,7 +33,7 @@ public class LoginFilter implements Filter{
 		HttpSession session = req.getSession();
 		String requestURI = req.getRequestURI();
 		
-		if("/Javaweb_Apartment/index.jsp".equals(requestURI)) {
+		if("/Javaweb_Apartment/index.jsp".equals(requestURI) || "/Javaweb_Apartment/".equals(requestURI)) {
 			logger.debug("Ìø×ªµÇÂ¼½çÃæ");
 			chain.doFilter(req, resp);
 			return;
